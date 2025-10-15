@@ -100,7 +100,7 @@ export default function Page() {
                 style={{ fontFamily: "Kalam, cursive" }}
               >
                 <Sparkles className="w-4 h-4 mr-2" />
-                GIAIC Monday Class Exclusive
+                GIAIC Sir Asharib Class Exclusive
               </motion.div>
 
               {/* Main Headline */}
@@ -224,7 +224,7 @@ export default function Page() {
                   <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black">
                     <iframe
                       src="https://www.youtube.com/embed/ugNNZR9sX0k"
-                      title="GIAIC Monday Class Startup Challenge Video"
+                      title="GIAIC Sir Asharib Class Startup Challenge Video"
                       className="w-full h-full"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -301,7 +301,7 @@ export default function Page() {
                   </div>
                   <div>
                     <p className="font-bold text-gray-900 text-sm" style={{ fontFamily: "Kalam, cursive" }}>
-                      Monday Class
+                      Sir Asharib Class
                     </p>
                     <p className="text-gray-600 text-xs">Exclusive Challenge</p>
                   </div>
@@ -517,7 +517,7 @@ export default function Page() {
               className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed"
               style={{ fontFamily: "Kalam, cursive" }}
             >
-              Join Monday 6-9 Class WhatsApp channel for tips, updates, and announcements.
+              Join Sir Asharib Class WhatsApp channel for tips, updates, and announcements.
             </motion.p>
 
             {/* WhatsApp Button */}

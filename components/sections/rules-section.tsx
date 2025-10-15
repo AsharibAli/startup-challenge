@@ -8,7 +8,7 @@ export default function RulesSection() {
     {
       icon: Users,
       title: "Eligibility",
-      description: "Open to all Monday 6-9 students at GIAIC. Solo participation or teams up to 4 members.",
+      description: "Open to all Sir Asharib class students at GIAIC. Solo participation or teams up to 4 members.",
       color: "blue",
     },
     {

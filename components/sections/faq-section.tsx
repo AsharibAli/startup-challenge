@@ -29,9 +29,9 @@ export default function FAQSection() {
         "Submit your project details (name, description, demo link), current revenue with proof, user metrics, your personal info, team details if applicable, and tech stack used. Revenue tracking is crucial for evaluation.",
     },
     {
-      question: "Who can participate in the GIAIC Monday Class Startup Challenge?",
+      question: "Who can participate in the GIAIC Sir Asharib Class Startup Challenge?",
       answer:
-        "The challenge is exclusively open to students enrolled in the GIAIC Monday 6-9 PM class. You can participate either solo or form teams of up to 4 members. All team members must be from the Monday class.",
+        "The challenge is exclusively open to students enrolled in the GIAIC Sir Asharib Class. You can participate either solo or form teams of up to 4 members. All team members must be from the Sir Asharib Class.",
     },
     {
       question: "What kind of projects can I build?",
@@ -236,7 +236,7 @@ export default function FAQSection() {
               Still Have Questions?
             </h3>
             <p className="text-purple-700 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-2">
-              Feel free to ask Sir Asharib Ali during Monday class sessions or reach out through the GIAIC Discord
+              Feel free to ask Sir Asharib Ali during Sunday class sessions or reach out through the GIAIC Discord
               server. I'm here to help you succeed in this challenge!
             </p>
           </div>

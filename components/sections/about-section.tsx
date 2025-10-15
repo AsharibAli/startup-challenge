@@ -75,7 +75,7 @@ export default function AboutSection() {
               </h3>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-3 sm:mb-4">
                 This isn't just another coding challenge. It's your gateway to entrepreneurship, designed to transform
-                Monday 6-9 students into startup founders.
+                Sir Asharib Class students into startup founders.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
                 Over four months, you'll build, market, and monetize your ideas while competing for a $1000 laptop prize

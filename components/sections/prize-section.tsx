@@ -106,7 +106,7 @@ export default function PrizeSection() {
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black">
                       <iframe
                         src="https://www.youtube.com/embed/ugNNZR9sX0k"
-                        title="GIAIC Monday Class Startup Challenge Video"
+                        title="GIAIC Sir Asharib Class Startup Challenge Video"
                         className="w-full h-full"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
