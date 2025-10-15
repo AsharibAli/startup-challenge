@@ -138,18 +138,6 @@ export default function TimelineSection() {
           </div>
         </div>
 
-        {/* Decorative Element */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex justify-center mt-16"
-        >
-          <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-            <div className="w-6 h-6 bg-purple-400 rounded-full"></div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

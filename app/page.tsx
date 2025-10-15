@@ -53,38 +53,6 @@ export default function Page() {
 
       {/* Hero Section - Completely Redesigned */}
       <section className="relative min-h-screen flex items-center justify-center px-3 sm:px-4 py-20 sm:py-24 lg:py-32 bg-gradient-to-br from-purple-50 via-white to-pink-50">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Floating Geometric Shapes */}
-          <motion.div
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 5, 0],
-            }}
-            transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-            className="absolute top-20 left-10 w-20 h-20 bg-purple-200 rounded-full opacity-60 blur-sm"
-          />
-          <motion.div
-            animate={{
-              y: [0, 15, 0],
-              rotate: [0, -3, 0],
-            }}
-            transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1 }}
-            className="absolute top-40 right-20 w-16 h-16 bg-pink-200 rounded-full opacity-50 blur-sm"
-          />
-          <motion.div
-            animate={{
-              y: [0, -10, 0],
-              x: [0, 5, 0],
-            }}
-            transition={{ duration: 7, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 2 }}
-            className="absolute bottom-40 left-20 w-12 h-12 bg-blue-200 rounded-full opacity-40 blur-sm"
-          />
-
-          {/* Gradient Orbs */}
-          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-purple-300 to-pink-300 rounded-full opacity-20 blur-3xl" />
-          <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-gradient-to-r from-blue-300 to-purple-300 rounded-full opacity-15 blur-3xl" />
-        </div>
 
         {/* Main Content Container */}
         <div className="relative z-10 max-w-7xl mx-auto w-full">
