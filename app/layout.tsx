@@ -1,0 +1,37 @@
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter, Source_Code_Pro } from "next/font/google"
+import "./globals.css"
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
+const codePro = Source_Code_Pro({
+  subsets: ["latin"],
+  variable: "--font-mono",
+})
+
+export const metadata: Metadata = {
+  title: "GIAIC Monday Class Startup Challenge",
+  description: "Build Your Startup, Win $1000 Laptop - A 3-month challenge by Sir Asharib Ali",
+    generator: 'v0.app'
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Caveat:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${inter.variable} ${codePro.variable} font-sans antialiased`}>{children}</body>
+    </html>
+  )
+}
