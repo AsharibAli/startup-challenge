@@ -22,8 +22,8 @@ export default function Page() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      // Challenge ends on October 30, 2025 at 12:00 PM PKT (UTC+5)
-      const endDate = new Date("2025-10-30T12:00:00+05:00")
+      // Challenge ends on November 15, 2025 at 12:00 PM PKT (UTC+5)
+      const endDate = new Date("2025-11-15T12:00:00+05:00")
       const now = new Date()
       const difference = endDate.getTime() - now.getTime()
 
@@ -137,7 +137,7 @@ export default function Page() {
                 <div className="flex items-center text-gray-600">
                   <Calendar className="w-5 h-5 mr-2 text-purple-600" />
                   <span className="font-medium" style={{ fontFamily: "Kalam, cursive" }}>
-                    4 Months
+                    4+ Months
                   </span>
                 </div>
                 <div className="flex items-center text-gray-600">
@@ -249,9 +249,9 @@ export default function Page() {
                   </div>
                   <div>
                     <p className="font-bold text-gray-900 text-sm" style={{ fontFamily: "Kalam, cursive" }}>
-                      July - October 2025
+                      July - November 2025
                     </p>
-                    <p className="text-gray-600 text-xs">4 Months to Build</p>
+                    <p className="text-gray-600 text-xs">4+ Months to Build</p>
                   </div>
                 </div>
               </motion.div>
@@ -317,7 +317,7 @@ export default function Page() {
                   <p className="text-lg sm:text-xl text-gray-600" style={{ fontFamily: "Kalam, cursive" }}>
                     {isTimeUp
                       ? "Submissions are now closed. Winner announcement coming soon!"
-                      : "Until submission deadline: October 30, 2025 at 12:00 PM PKT"}
+                      : "Until submission deadline: November 15, 2025 at 12:00 PM PKT"}
                   </p>
                 </motion.div>
 

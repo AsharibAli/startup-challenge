@@ -254,7 +254,7 @@ export default function PrizeSection() {
             </motion.div>
 
             <h3 className="text-3xl font-bold mb-4" style={{ fontFamily: "Kalam, cursive" }}>
-              Winner Announcement: Early November 2025
+              Winner Announcement: Early December 2025
             </h3>
             <p className="text-xl leading-relaxed max-w-2xl mx-auto">
               The winner will be announced in a special ceremony, celebrating not just the prize recipient, but all

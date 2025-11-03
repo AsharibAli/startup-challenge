@@ -16,7 +16,7 @@ export default function FAQSection() {
     {
       question: "When can I submit my startup project?",
       answer:
-        "Submissions are open throughout the entire 4-month period (June 30 - October 30, 2025). You can submit anytime and update your submission multiple times as your revenue and metrics improve. Final deadline is October 30, 2025.",
+        "Submissions are open throughout the entire 4-month period (June 30 - November 15, 2025). You can submit anytime and update your submission multiple times as your revenue and metrics improve. Final deadline is November 15, 2025.",
     },
     {
       question: "Can I update my submission if my revenue increases?",
@@ -51,7 +51,7 @@ export default function FAQSection() {
     {
       question: "Can I work on an existing project or idea?",
       answer:
-        "Projects must be original work started during the challenge period (June 30 - October 30, 2025). However, you can use open-source libraries, frameworks, and tools. The core product and business should be developed during the challenge timeframe.",
+        "Projects must be original work started during the challenge period (June 30 - November 15, 2025). However, you can use open-source libraries, frameworks, and tools. The core product and business should be developed during the challenge timeframe.",
     },
     {
       question: "How will projects be evaluated?",
@@ -61,7 +61,7 @@ export default function FAQSection() {
     {
       question: "What exactly is the $1000 laptop prize?",
       answer:
-        "The grand prize is a brand new, high-performance laptop worth $1000, personally sponsored by Sir Asharib Ali. The winner will receive a laptop suitable for development work and future entrepreneurial projects. Only one laptop will be awarded to the overall winner.",
+        "The grand prize is a brand new, high-performance laptop worth $1000, personally sponsored by Sir Asharib Ali. The winner will receive a laptop suitable for development work and future entrepreneurial projects. There might be more than one winner, depending on the quality of the submissions, and then reward will be split among the winners.",
     },
     {
       question: "What happens to my project and intellectual property?",

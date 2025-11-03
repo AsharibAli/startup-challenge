@@ -28,7 +28,7 @@ export default function TimelineSection() {
       color: "orange",
     },
     {
-      date: "October 30, 2025",
+      date: "November 15, 2025",
       title: "Submission Deadline",
       description: "Final project submissions due. Include your product, demo video, and business metrics.",
       icon: Trophy,
