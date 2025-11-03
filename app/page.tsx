@@ -22,8 +22,8 @@ export default function Page() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      // Challenge ends on October 30, 2025 at 12:00 PM PKT (UTC+5)
-      const endDate = new Date("2025-10-30T12:00:00+05:00")
+      // Challenge ends on November 15, 2025 at 12:00 PM PKT (UTC+5)
+      const endDate = new Date("2025-11-15T12:00:00+05:00")
       const now = new Date()
       const difference = endDate.getTime() - now.getTime()
 
@@ -205,7 +205,7 @@ export default function Page() {
                 {/* Sponsor Info */}
                 <div className="text-center bg-purple-50 rounded-2xl p-4">
                   <p className="text-purple-700 font-medium" style={{ fontFamily: "Kalam, cursive" }}>
-                    🎯 Personally Sponsored by
+                    ?? Personally Sponsored by
                   </p>
                   <p className="text-purple-900 font-bold text-lg" style={{ fontFamily: "Kalam, cursive" }}>
                     Sir Asharib Ali
@@ -317,7 +317,7 @@ export default function Page() {
                   <p className="text-lg sm:text-xl text-gray-600" style={{ fontFamily: "Kalam, cursive" }}>
                     {isTimeUp
                       ? "Submissions are now closed. Winner announcement coming soon!"
-                      : "Until submission deadline: October 30, 2025 at 12:00 PM PKT"}
+                      : "Until submission deadline: November 15, 2025 at 12:00 PM PKT"}
                   </p>
                 </motion.div>
 
@@ -402,7 +402,7 @@ export default function Page() {
                       className="text-lg sm:text-xl text-gray-700 font-medium"
                       style={{ fontFamily: "Kalam, cursive" }}
                     >
-                      🚀 Every second counts! Build, iterate, and make your startup dreams a reality.
+                      ?? Every second counts! Build, iterate, and make your startup dreams a reality.
                     </p>
                   </motion.div>
                 )}
