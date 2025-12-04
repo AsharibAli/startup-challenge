@@ -87,6 +87,10 @@ export default function Page() {
             <span className="text-sm font-medium text-gray-600">
               GIAIC Sir Asharib Class Exclusive
             </span>
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+            </span>
           </motion.div>
 
           <motion.h1
