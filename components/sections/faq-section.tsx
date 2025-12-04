@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Clock, ChevronDown, ChevronUp, HelpCircle } from "lucide-react"
+import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react"
 
 export default function FAQSection() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(0)
@@ -77,73 +77,31 @@ export default function FAQSection() {
   return (
     <section
       id="faqs"
-      className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden"
+      className="py-24 bg-gray-50 relative overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto">
-        {/* Section Header */}
-        <div className="relative mb-8 sm:mb-12 lg:mb-16">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="absolute -inset-4 sm:-inset-8"
-          >
-            <svg width="100%" height="100" viewBox="0 0 600 100" className="w-full sm:h-[140px]">
-              <defs>
-                <linearGradient id="faq-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.3" />
-                  <stop offset="50%" stopColor="#8B5CF6" stopOpacity="0.4" />
-                  <stop offset="100%" stopColor="#A855F7" stopOpacity="0.2" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M60,50 Q180,20 320,40 Q460,60 540,45 Q500,70 320,65 Q180,80 60,50 Z"
-                fill="url(#faq-gradient)"
-                className="animate-pulse"
-              />
-            </svg>
-          </motion.div>
-
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-gray-900 relative z-10 px-2"
-            style={{ fontFamily: "Kalam, cursive" }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
           >
             Frequently Asked Questions
           </motion.h2>
-
-          {/* Decorative question mark - Hidden on mobile */}
-          <motion.div
-            initial={{ opacity: 0, rotate: -15 }}
-            whileInView={{ opacity: 1, rotate: 0 }}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="absolute top-0 right-1/4 text-blue-400 hidden sm:block"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-lg text-gray-600"
           >
-            <HelpCircle className="w-6 h-6 sm:w-8 sm:h-8" />
-          </motion.div>
+            Everything you need to know about the challenge.
+          </motion.p>
         </div>
 
-        {/* Reading Time */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-center justify-center mb-8 sm:mb-12"
-        >
-          <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 mr-2" />
-          <span className="text-blue-600 font-medium text-sm sm:text-base" style={{ fontFamily: "Kalam, cursive" }}>
-            Reading time 5 minutes
-          </span>
-        </motion.div>
-
-        {/* FAQ List - Mobile Optimized */}
-        <div className="space-y-3 sm:space-y-4">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -151,27 +109,24 @@ export default function FAQSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.03 }}
-              className="bg-white rounded-xl sm:rounded-2xl shadow-lg border-2 border-gray-100 hover:border-purple-200 transition-all duration-300 overflow-hidden"
+              className="bg-white rounded-2xl border border-gray-200 overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-4 sm:px-6 py-4 sm:py-6 text-left flex items-center justify-between hover:bg-purple-50 transition-colors duration-300"
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300"
               >
-                <h3
-                  className="text-base sm:text-lg font-semibold text-gray-900 pr-3 sm:pr-4 leading-relaxed"
-                  style={{ fontFamily: "Kalam, cursive" }}
-                >
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 pr-8">
                   {faq.question}
                 </h3>
                 <motion.div
                   animate={{ rotate: openFAQ === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="flex-shrink-0"
+                  className="flex-shrink-0 text-gray-400"
                 >
                   {openFAQ === index ? (
-                    <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" />
+                    <ChevronUp className="w-5 h-5" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" />
+                    <ChevronDown className="w-5 h-5" />
                   )}
                 </motion.div>
               </button>
@@ -185,61 +140,34 @@ export default function FAQSection() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-4 sm:px-6 pb-4 sm:pb-6">
-                      <div className="border-t border-gray-100 pt-3 sm:pt-4">
-                        <p className="text-gray-700 leading-relaxed text-sm sm:text-base lg:text-lg">{faq.answer}</p>
-                      </div>
+                    <div className="px-6 pb-6 pt-2">
+                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
-
-              {/* Watercolor accent for open FAQ - Hidden on mobile for performance */}
-              {openFAQ === index && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  className="absolute top-0 right-0 w-16 h-16 sm:w-20 sm:h-20 pointer-events-none hidden sm:block"
-                >
-                  <svg width="100%" height="100%" viewBox="0 0 80 80">
-                    <circle cx="60" cy="20" r="12" fill="#E879F9" opacity="0.1" />
-                    <circle cx="65" cy="15" r="8" fill="#C084FC" opacity="0.15" />
-                  </svg>
-                </motion.div>
-              )}
             </motion.div>
           ))}
         </div>
 
-        {/* Still Have Questions - Mobile Optimized */}
+        {/* Still Have Questions */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 sm:mt-16 bg-gradient-to-r from-purple-100 to-blue-100 border-2 border-purple-200 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center relative overflow-hidden"
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-16 text-center"
         >
-          {/* Background decoration - Hidden on mobile for performance */}
-          <div className="absolute inset-0 opacity-5 hidden sm:block">
-            <svg width="100%" height="100%" viewBox="0 0 400 200">
-              <path d="M0,100 Q100,50 200,80 Q300,110 400,90 L400,200 L0,200 Z" fill="#8B5CF6" />
-            </svg>
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 text-purple-600 mb-4">
+            <HelpCircle className="w-6 h-6" />
           </div>
-
-          <div className="relative z-10">
-            <HelpCircle className="w-10 h-10 sm:w-12 sm:h-12 text-purple-600 mx-auto mb-3 sm:mb-4" />
-            <h3
-              className="text-xl sm:text-2xl font-bold text-purple-800 mb-3 sm:mb-4"
-              style={{ fontFamily: "Kalam, cursive" }}
-            >
-              Still Have Questions?
-            </h3>
-            <p className="text-purple-700 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-2">
-              Feel free to ask Sir Asharib Ali during Sunday class sessions or reach out through the GIAIC Discord
-              server. I'm here to help you succeed in this challenge!
-            </p>
-          </div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">
+            Still Have Questions?
+          </h3>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+            Feel free to ask Sir Asharib Ali during Sunday class sessions or reach out through the GIAIC Discord
+            server.
+          </p>
         </motion.div>
       </div>
     </section>

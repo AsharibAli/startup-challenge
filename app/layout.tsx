@@ -26,10 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Caveat:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+
       </head>
       <body className={`${inter.variable} ${codePro.variable} font-sans antialiased`}>{children}</body>
     </html>

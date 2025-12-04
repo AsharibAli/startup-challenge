@@ -60,25 +60,24 @@ export default function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3 sm:py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <h1 className="text-lg sm:text-2xl font-bold text-purple-600" style={{ fontFamily: "Kalam, cursive" }}>
-              <span className="hidden sm:inline">Startup Challenge</span>
-              <span className="sm:hidden">Startup Challenge</span>
+            <h1 className="text-xl font-bold text-gray-900 tracking-tight">
+              Startup Challenge
             </h1>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <motion.button
                 key={item.name}
@@ -86,24 +85,24 @@ export default function Navigation() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative text-gray-700 hover:text-purple-600 transition-colors duration-300 text-base xl:text-lg font-medium group py-2 px-1"
-                style={{ fontFamily: "Kalam, cursive" }}
+                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
-
-                {/* Watercolor hover effect */}
-                <div className="absolute -inset-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <svg width="100%" height="100%" viewBox="0 0 100 40" className="absolute inset-0">
-                    <path
-                      d="M10,20 Q30,10 50,18 Q70,25 90,20 Q85,30 50,25 Q30,30 10,20 Z"
-                      fill="#E879F9"
-                      opacity="0.2"
-                    />
-                  </svg>
-                </div>
               </motion.button>
             ))}
+            <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+            >
+                <Button 
+                    size="sm" 
+                    className="bg-gray-900 text-white hover:bg-gray-800 rounded-full px-6"
+                    onClick={() => window.open("https://forms.gle/YQvWdj8sS4stP99D7", "_blank")}
+                >
+                    Submit Now
+                </Button>
+            </motion.div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -115,7 +114,7 @@ export default function Navigation() {
                 e.stopPropagation()
                 setIsMobileMenuOpen(!isMobileMenuOpen)
               }}
-              className="text-purple-600 p-2 hover:bg-purple-50"
+              className="text-gray-900 p-2 hover:bg-gray-100"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -137,10 +136,10 @@ export default function Navigation() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -20, scale: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl mx-3 mt-4 overflow-hidden"
-                onClick={(e) => e.stopPropagation()}
+                className="bg-white rounded-2xl shadow-xl mx-4 mt-2 overflow-hidden border border-gray-100"
+                onClick={(e: React.MouseEvent) => e.stopPropagation()}
               >
-                <div className="px-4 py-6 space-y-1">
+                <div className="px-4 py-6 space-y-2">
                   {navItems.map((item, index) => (
                     <motion.button
                       key={item.name}
@@ -148,12 +147,19 @@ export default function Navigation() {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}
-                      className="block w-full text-left text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-300 text-lg font-medium py-3 px-4 rounded-xl"
-                      style={{ fontFamily: "Kalam, cursive" }}
+                      className="block w-full text-left text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300 text-base font-medium py-3 px-4 rounded-xl"
                     >
                       {item.name}
                     </motion.button>
                   ))}
+                  <div className="pt-4 px-4">
+                    <Button 
+                        className="w-full bg-gray-900 text-white hover:bg-gray-800 rounded-full"
+                        onClick={() => window.open("https://forms.gle/YQvWdj8sS4stP99D7", "_blank")}
+                    >
+                        Submit Now
+                    </Button>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>

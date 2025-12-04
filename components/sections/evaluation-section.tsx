@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Clock, Code, Target, TrendingUp, Trophy, Star } from "lucide-react"
+import { Code, Target, TrendingUp, Trophy } from "lucide-react"
 
 export default function EvaluationSection() {
   const criteria = [
@@ -45,176 +45,74 @@ export default function EvaluationSection() {
   ]
 
   return (
-    <section id="evaluation" className="py-20 px-4 bg-gray-50 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="relative mb-16">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="absolute -inset-8"
-          >
-            <svg width="100%" height="140" viewBox="0 0 600 140" className="w-full">
-              <path
-                d="M70,70 Q190,30 330,60 Q470,90 530,65 Q490,100 330,90 Q190,110 70,70 Z"
-                fill="#F59E0B"
-                opacity="0.25"
-              />
-              <path
-                d="M90,60 Q210,40 350,55 Q490,70 520,60 Q485,85 350,80 Q210,90 90,60 Z"
-                fill="#EAB308"
-                opacity="0.2"
-              />
-            </svg>
-          </motion.div>
-
+    <section id="evaluation" className="py-24 bg-gray-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-center text-gray-900 relative z-10"
-            style={{ fontFamily: "Kalam, cursive" }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
           >
             Evaluation Criteria
           </motion.h2>
-
-          {/* Decorative stars */}
-          <motion.div
-            initial={{ opacity: 0, rotate: -45 }}
-            whileInView={{ opacity: 1, rotate: 0 }}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="absolute top-0 left-1/4 text-yellow-400"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-lg text-gray-600"
           >
-            <Star className="w-8 h-8 fill-current animate-pulse" />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, rotate: 45 }}
-            whileInView={{ opacity: 1, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="absolute top-0 right-1/4 text-yellow-400"
-          >
-            <Star className="w-6 h-6 fill-current animate-pulse" />
-          </motion.div>
+            Your startup will be evaluated based on a balanced mix of technical execution, business viability, and growth.
+          </motion.p>
         </div>
 
-        {/* Reading Time */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-center justify-center mb-12"
-        >
-          <Clock className="w-4 h-4 text-purple-600 mr-2" />
-          <span className="text-purple-600 font-medium" style={{ fontFamily: "Kalam, cursive" }}>
-            Reading time 4 minutes
-          </span>
-        </motion.div>
-
-        {/* Criteria Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {criteria.map((criterion, index) => {
             const Icon = criterion.icon
             const colorClasses = {
-              blue: "from-blue-500 to-blue-600 bg-blue-100 text-blue-600 border-blue-200",
-              purple: "from-purple-500 to-purple-600 bg-purple-100 text-purple-600 border-purple-200",
-              green: "from-green-500 to-green-600 bg-green-100 text-green-600 border-green-200",
-              orange: "from-orange-500 to-orange-600 bg-orange-100 text-orange-600 border-orange-200",
+              blue: "bg-blue-50 text-blue-600 border-blue-100",
+              purple: "bg-purple-50 text-purple-600 border-purple-100",
+              green: "bg-green-50 text-green-600 border-green-100",
+              orange: "bg-orange-50 text-orange-600 border-orange-100",
             }
 
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-3xl p-8 shadow-lg border-2 border-gray-100 hover:border-purple-200 transition-all duration-300 hover:shadow-xl relative overflow-hidden group"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
               >
-                {/* Watercolor background on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
-                  <svg width="100%" height="100%" viewBox="0 0 300 200">
-                    <path
-                      d="M50,100 Q100,50 150,80 Q200,110 250,90 Q220,140 150,120 Q100,150 50,100 Z"
-                      fill={`url(#gradient-${criterion.color})`}
-                    />
-                    <defs>
-                      <linearGradient id={`gradient-${criterion.color}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop
-                          offset="0%"
-                          stopColor={
-                            criterion.color === "blue"
-                              ? "#3B82F6"
-                              : criterion.color === "purple"
-                                ? "#A855F7"
-                                : criterion.color === "green"
-                                  ? "#10B981"
-                                  : "#F59E0B"
-                          }
-                        />
-                        <stop
-                          offset="100%"
-                          stopColor={
-                            criterion.color === "blue"
-                              ? "#1D4ED8"
-                              : criterion.color === "purple"
-                                ? "#7C3AED"
-                                : criterion.color === "green"
-                                  ? "#059669"
-                                  : "#D97706"
-                          }
-                        />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-
-                {/* Header */}
-                <div className="flex items-start justify-between mb-6 relative z-10">
+                <div className="flex items-start justify-between mb-6">
                   <div
-                    className={`w-16 h-16 rounded-full flex items-center justify-center ${colorClasses[criterion.color as keyof typeof colorClasses].split(" ").slice(2).join(" ")}`}
+                    className={`w-14 h-14 rounded-xl flex items-center justify-center ${colorClasses[criterion.color as keyof typeof colorClasses]}`}
                   >
-                    <Icon className="w-8 h-8" />
+                    <Icon className="w-7 h-7" />
                   </div>
                   <div
-                    className={`px-3 py-1 rounded-full text-sm font-bold bg-gradient-to-r ${colorClasses[criterion.color as keyof typeof colorClasses].split(" ").slice(0, 2).join(" ")} text-white`}
+                    className={`px-3 py-1 rounded-full text-sm font-bold bg-gray-900 text-white`}
                   >
                     {criterion.weight}
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: "Kalam, cursive" }}>
-                    {criterion.title}
-                  </h3>
-                  <p className="text-gray-600 text-lg mb-4 leading-relaxed">{criterion.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {criterion.title}
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{criterion.description}</p>
 
-                  {/* Details List */}
-                  <ul className="space-y-2">
-                    {criterion.details.map((detail, detailIndex) => (
-                      <motion.li
-                        key={detailIndex}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: index * 0.1 + detailIndex * 0.05 }}
-                        className="flex items-center text-gray-700"
-                      >
-                        <div
-                          className={`w-2 h-2 rounded-full mr-3 ${colorClasses[criterion.color as keyof typeof colorClasses].split(" ")[2]}`}
-                        />
-                        {detail}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
+                <ul className="space-y-3">
+                  {criterion.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center text-gray-700 text-sm">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             )
           })}
@@ -222,47 +120,25 @@ export default function EvaluationSection() {
 
         {/* Judging Process */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 rounded-3xl p-8 text-center relative overflow-hidden"
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="bg-white border border-gray-200 rounded-2xl p-8 text-center max-w-4xl mx-auto shadow-sm"
         >
-          {/* Background decoration */}
-          <div className="absolute inset-0 opacity-5">
-            <svg width="100%" height="100%" viewBox="0 0 400 200">
-              <path d="M0,100 Q100,50 200,80 Q300,110 400,90 L400,200 L0,200 Z" fill="#A855F7" />
-            </svg>
-          </div>
-
-          <div className="relative z-10">
-            <Trophy className="w-16 h-16 text-purple-600 mx-auto mb-6" />
-            <h3 className="text-3xl font-bold text-purple-800 mb-4" style={{ fontFamily: "Kalam, cursive" }}>
-              The Judging Process
-            </h3>
-            <p className="text-purple-700 text-lg leading-relaxed max-w-3xl mx-auto mb-6">
-              Sir Asharib Ali will personally evaluate each submission based on the criteria above. The evaluation
-              process will be transparent, fair, and focused on recognizing genuine innovation and entrepreneurial
-              spirit.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-purple-600 font-medium">
-              <span className="bg-white px-4 py-2 rounded-full shadow-sm">📊 Data-Driven Analysis</span>
-              <span className="bg-white px-4 py-2 rounded-full shadow-sm">🎯 Fair & Transparent</span>
-              <span className="bg-white px-4 py-2 rounded-full shadow-sm">🚀 Innovation Focused</span>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Decorative Element */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex justify-center mt-16"
-        >
-          <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-            <div className="w-6 h-6 bg-orange-400 rounded-full"></div>
+          <Trophy className="w-12 h-12 text-purple-600 mx-auto mb-6" />
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            The Judging Process
+          </h3>
+          <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+            Sir Asharib Ali will personally evaluate each submission based on the criteria above. The evaluation
+            process will be transparent, fair, and focused on recognizing genuine innovation and entrepreneurial
+            spirit.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-gray-700">
+            <span className="bg-gray-50 px-4 py-2 rounded-full border border-gray-100">📊 Data-Driven Analysis</span>
+            <span className="bg-gray-50 px-4 py-2 rounded-full border border-gray-100">🎯 Fair & Transparent</span>
+            <span className="bg-gray-50 px-4 py-2 rounded-full border border-gray-100">🚀 Innovation Focused</span>
           </div>
         </motion.div>
       </div>
