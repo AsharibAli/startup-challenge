@@ -111,7 +111,7 @@ export default function Page() {
                 Transform your innovative ideas into reality. Join the ultimate
                 4-month startup challenge and compete for a{" "}
                 <span className="font-bold text-yellow-600">
-                  $1000 Rewards
+                  $1000 in Rewards
                 </span>
                 .
               </motion.p>
