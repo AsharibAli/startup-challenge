@@ -14,7 +14,7 @@ const codePro = Source_Code_Pro({
 
 export const metadata: Metadata = {
   title: "GIAIC Sir Asharib Class Startup Challenge",
-  description: "Build Your Startup, Win $1000 Laptop - A 3-month challenge by Sir Asharib Ali",
+  description: "Build Your Startup, Win $1000 Rewards - A 3-month challenge by Sir Asharib Ali",
     generator: 'v0.app'
 }
 

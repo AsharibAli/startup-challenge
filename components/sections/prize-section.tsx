@@ -40,7 +40,7 @@ export default function PrizeSection() {
             className="text-4xl md:text-6xl font-bold text-center text-gray-900 relative z-10"
             style={{ fontFamily: "Kalam, cursive" }}
           >
-            The Grand Prize
+            The Grand Prize Poll
           </motion.h2>
 
           {/* Floating sparkles */}
@@ -121,13 +121,12 @@ export default function PrizeSection() {
                   <div className="flex items-center justify-center mb-4">
                     <Trophy className="w-12 h-12 text-yellow-600 mr-3" />
                     <h3 className="text-3xl font-bold text-gray-900" style={{ fontFamily: "Kalam, cursive" }}>
-                      $1000 Laptop
+                      $1000 in Rewards
                     </h3>
                   </div>
 
                   <p className="text-gray-700 text-lg leading-relaxed">
-                    A brand new, high-performance laptop worth $1000 - perfect for your future development projects and
-                    entrepreneurial journey.
+                    Startup Challenge Winners will receive a cash reward of $1000, equally divided among the winners.
                   </p>
 
                   <div className="bg-yellow-50 rounded-2xl p-4 border border-yellow-200">

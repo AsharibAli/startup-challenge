@@ -59,9 +59,9 @@ export default function FAQSection() {
         "Projects are evaluated on four criteria: Product Innovation & Market Fit (30%), Code Quality & Technical Excellence (25%), Business Metrics & Growth (25%), and Marketing & Distribution (20%). Sir Asharib Ali will personally review all submissions.",
     },
     {
-      question: "What exactly is the $1000 laptop prize?",
+      question: "What exactly is the $1000 prize in rewards?",
       answer:
-        "The grand prize is a brand new, high-performance laptop worth $1000, personally sponsored by Sir Asharib Ali. The winner will receive a laptop suitable for development work and future entrepreneurial projects. There might be more than one winner, depending on the quality of the submissions, and then reward will be split among the winners.",
+        "Startup Challenge Winners will receive a cash reward of $1000, equally divided among the winners.",
     },
     {
       question: "What happens to my project and intellectual property?",

@@ -96,7 +96,7 @@ export default function Page() {
                   Dream Startup
                 </span>
                 <span className="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-gray-600 font-medium mt-2">
-                  Win $1000 Laptop
+                  Win $1000 in Rewards
                 </span>
               </motion.h1>
 
@@ -111,7 +111,7 @@ export default function Page() {
                 Transform your innovative ideas into reality. Join the ultimate
                 4-month startup challenge and compete for a{" "}
                 <span className="font-bold text-yellow-600">
-                  $1000 laptop prize
+                  $1000 Rewards
                 </span>
                 .
               </motion.p>
@@ -212,7 +212,7 @@ export default function Page() {
                     className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2"
                     style={{ fontFamily: "Kalam, cursive" }}
                   >
-                    Grand Prize
+                    Prize Poll
                   </h3>
                   <div className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500">
                     $1000
@@ -221,7 +221,7 @@ export default function Page() {
                     className="text-gray-600 font-medium"
                     style={{ fontFamily: "Kalam, cursive" }}
                   >
-                    Brand New Laptop
+                  Rewards
                   </p>
                 </div>
 

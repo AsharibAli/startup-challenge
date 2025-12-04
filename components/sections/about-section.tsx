@@ -78,7 +78,7 @@ export default function AboutSection() {
                 Sir Asharib Class students into startup founders.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                Over four months, you'll build, market, and monetize your ideas while competing for a $1000 laptop prize
+                Over four months, you'll build, market, and monetize your ideas while competing for a $1000 prize in rewards
                 personally sponsored by Sir Asharib Ali.
               </p>
             </div>
