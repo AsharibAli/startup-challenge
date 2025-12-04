@@ -221,7 +221,7 @@ export default function Page() {
                     className="text-gray-600 font-medium"
                     style={{ fontFamily: "Kalam, cursive" }}
                   >
-                  Rewards
+                  In Rewards
                   </p>
                 </div>
 
