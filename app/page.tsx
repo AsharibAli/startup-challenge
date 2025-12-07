@@ -198,13 +198,27 @@ export default function Page() {
                 }`}
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  {isTimeUp ? "Challenge Completed" : "Time is Ticking"}
+                  {isTimeUp ? "Winners Announced" : "Time is Ticking"}
                 </h2>
                 <p className="text-lg text-gray-600">
                   {isTimeUp
-                    ? "The submission window has closed. Winners will be Announce on 7th December 2025 (on-site) in the GIAIC Class by Sir Asharib Ali."
+                    ? "The winners have been announced! Click the button below to see the results."
                     : "Don't miss out on this opportunity. Submit your startup idea before the deadline."}
                 </p>
+                {isTimeUp && (
+                  <Button
+                    size="lg"
+                    className="mt-6 h-12 px-8 text-base font-semibold bg-gray-900 text-white hover:bg-gray-800 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                    onClick={() =>
+                      window.open(
+                        "https://asharibali.medium.com/startup-challenge-winners-dcf1f3a21aed",
+                        "_blank"
+                      )
+                    }
+                  >
+                    See Winners
+                  </Button>
+                )}
               </div>
 
               {!isTimeUp && (
