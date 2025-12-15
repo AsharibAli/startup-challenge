@@ -152,25 +152,6 @@ export default function PrizeSection() {
             </div>
           </motion.div>
         </div>
-
-        {/* Winner Announcement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-gray-900 rounded-2xl p-8 text-center text-white relative overflow-hidden"
-        >
-          <div className="relative z-10">
-            <h3 className="text-2xl font-bold mb-4">
-              Winner Announcement: Early December 2025
-            </h3>
-            <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
-              The winner will be announced in a special ceremony, celebrating not just the prize recipient, but all
-              participants who took on this entrepreneurial challenge!
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

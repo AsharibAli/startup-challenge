@@ -98,9 +98,9 @@ export default function Navigation() {
                 <Button 
                     size="sm" 
                     className="bg-gray-900 text-white hover:bg-gray-800 rounded-full px-6"
-                    onClick={() => window.open("https://forms.gle/YQvWdj8sS4stP99D7", "_blank")}
+                    onClick={() => window.open("https://asharibali.medium.com/startup-challenge-winners-dcf1f3a21aed", "_blank")}
                 >
-                    Submit Now
+                    See Winners
                 </Button>
             </motion.div>
           </div>
@@ -155,9 +155,9 @@ export default function Navigation() {
                   <div className="pt-4 px-4">
                     <Button 
                         className="w-full bg-gray-900 text-white hover:bg-gray-800 rounded-full"
-                        onClick={() => window.open("https://forms.gle/YQvWdj8sS4stP99D7", "_blank")}
+                        onClick={() => window.open("https://asharibali.medium.com/startup-challenge-winners-dcf1f3a21aed", "_blank")}
                     >
-                        Submit Now
+                        See Winners  
                     </Button>
                   </div>
                 </div>

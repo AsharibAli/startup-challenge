@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
@@ -129,10 +130,10 @@ export default function Page() {
               size="lg"
               className="h-12 px-8 text-base font-semibold bg-gray-900 text-white hover:bg-gray-800 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               onClick={() =>
-                window.open("https://forms.gle/YQvWdj8sS4stP99D7", "_blank")
+                window.open("https://asharibali.medium.com/startup-challenge-winners-dcf1f3a21aed", "_blank")
               }
             >
-              Submit Your Startup
+              See the Winners
             </Button>
             <Button
               variant="outline"
@@ -180,70 +181,97 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Countdown Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-purple-50 rounded-full blur-3xl -mr-32 -mt-32 opacity-50" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-50 rounded-full blur-3xl -ml-32 -mb-32 opacity-50" />
-            
-            <div
-              className={`relative z-10 flex flex-col items-center gap-12 ${
-                isTimeUp ? "justify-center" : "lg:flex-row justify-between"
-              }`}
+      {/* Winners / Countdown Section */}
+      <section className="py-24 relative overflow-hidden">
+        {/* Subtle gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50 pointer-events-none" />
+        
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          {isTimeUp ? (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
             >
-              <div
-                className={`text-center max-w-xl ${
-                  isTimeUp ? "mx-auto" : "lg:text-left"
-                }`}
-              >
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  {isTimeUp ? "Winners Announced" : "Time is Ticking"}
-                </h2>
-                <p className="text-lg text-gray-600">
-                  {isTimeUp
-                    ? "The winners have been announced! Click the button below to see the results."
-                    : "Don't miss out on this opportunity. Submit your startup idea before the deadline."}
-                </p>
-                {isTimeUp && (
-                  <Button
-                    size="lg"
-                    className="mt-6 h-12 px-8 text-base font-semibold bg-gray-900 text-white hover:bg-gray-800 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-                    onClick={() =>
-                      window.open(
-                        "https://asharibali.medium.com/startup-challenge-winners-dcf1f3a21aed",
-                        "_blank"
-                      )
-                    }
-                  >
-                    See Winners
-                  </Button>
-                )}
-              </div>
+              {/* Heading */}
+              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                Winners Announced
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
+                Congratulations to all the participants! Here are the champions of the Startup Challenge.
+              </p>
 
-              {!isTimeUp && (
-                <div className="grid grid-cols-4 gap-4 sm:gap-6">
-                  {[
-                    { label: "Days", value: timeLeft.days },
-                    { label: "Hours", value: timeLeft.hours },
-                    { label: "Minutes", value: timeLeft.minutes },
-                    { label: "Seconds", value: timeLeft.seconds },
-                  ].map((item) => (
-                    <div key={item.label} className="flex flex-col items-center">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-900 rounded-2xl flex items-center justify-center mb-2 shadow-lg">
-                        <span className="text-2xl sm:text-3xl font-bold text-white font-mono">
-                          {item.value.toString().padStart(2, "0")}
-                        </span>
-                      </div>
-                      <span className="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider">
-                        {item.label}
+              {/* Winners Image */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="relative mb-12 max-w-2xl mx-auto"
+              >
+                <div className="absolute -inset-4 bg-gradient-to-r from-purple-200 via-pink-200 to-amber-200 rounded-3xl blur-2xl opacity-40" />
+                <Image
+                  src="/winners.jpg"
+                  alt="Startup Challenge Winners"
+                  width={800}
+                  height={533}
+                  className="relative w-full h-auto rounded-2xl shadow-2xl"
+                  priority
+                />
+              </motion.div>
+
+              {/* CTA Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <Button
+                  size="lg"
+                  className="h-12 px-8 text-base font-semibold bg-gray-900 text-white hover:bg-gray-800 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  onClick={() =>
+                    window.open(
+                      "https://asharibali.medium.com/startup-challenge-winners-dcf1f3a21aed",
+                      "_blank"
+                    )
+                  }
+                >
+                  Read Full Announcement
+                </Button>
+              </motion.div>
+            </motion.div>
+          ) : (
+            <div className="text-center">
+              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                Time is Ticking
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
+                Don&apos;t miss out on this opportunity. Submit your startup idea before the deadline.
+              </p>
+              <div className="grid grid-cols-4 gap-4 sm:gap-8 max-w-xl mx-auto">
+                {[
+                  { label: "Days", value: timeLeft.days },
+                  { label: "Hours", value: timeLeft.hours },
+                  { label: "Minutes", value: timeLeft.minutes },
+                  { label: "Seconds", value: timeLeft.seconds },
+                ].map((item) => (
+                  <div key={item.label} className="flex flex-col items-center">
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 bg-gray-900 rounded-2xl flex items-center justify-center mb-3 shadow-xl">
+                      <span className="text-2xl sm:text-4xl font-bold text-white font-mono">
+                        {item.value.toString().padStart(2, "0")}
                       </span>
                     </div>
-                  ))}
-                </div>
-              )}
+                    <span className="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider">
+                      {item.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
 
